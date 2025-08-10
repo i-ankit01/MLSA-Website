@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex flex-col gap-5 sm:flex-row">
-              <Link href={"/volunteer-registration"}
+              <Link href={"/register"}
                 className="group relative inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold text-white shadow-lg cursor-pointer transition hover:shadow-xl"
                 style={{ backgroundColor: BRAND_SECONDARY }}
               >
