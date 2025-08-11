@@ -83,11 +83,11 @@ export default function RegistrationPage() {
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel style={{ color: "#1F3B61" }}>Name</FormLabel>
+                <FormItem className="bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary"><span className="bg-red-300 w-5 h-5 rounded-full text-sm flex items-center justify-center">1</span>Name</FormLabel>
                   <FormControl>
                     <Input
-                      className="p-4 text-lg"
+                      className="p-4 text-lg border border-gray-300"
                       placeholder="Enter your full name"
                       {...field}
                       required
@@ -102,8 +102,8 @@ export default function RegistrationPage() {
               control={form.control}
               name="rollNo"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel style={{ color: "#1F3B61" }}>Roll Number</FormLabel>
+                <FormItem className="bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary">Roll Number</FormLabel>
                   <FormControl>
                     <Input
                       className="p-4 text-lg"
@@ -119,39 +119,32 @@ export default function RegistrationPage() {
             {/* Branch & Year */}
             <div className="flex flex-col sm:flex-row gap-6">
               <FormField
-                control={form.control}
-                name="branch"
-                render={({ field }) => (
-                  <FormItem className="flex-1">
-                    <FormLabel style={{ color: "#1F3B61" }}>Branch</FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="p-4 text-lg">
-                          <SelectValue placeholder="Select branch" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="CSE">CSE</SelectItem>
-                        <SelectItem value="IT">IT</SelectItem>
-                        <SelectItem value="ECE">ECE</SelectItem>
-                        <SelectItem value="ME">ME</SelectItem>
-                        <SelectItem value="CE">CE</SelectItem>
-                        <SelectItem value="EE">EE</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </FormItem>
-                )}
-              />
+              control={form.control}
+              name="branch"
+              render={({ field }) => (
+                <FormItem className="flex-1 bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary">Branch</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="p-4 text-lg"
+                      placeholder="Enter your branch"
+                      {...field}
+                      required
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
 
               <FormField
                 control={form.control}
                 name="year"
                 render={({ field }) => (
-                  <FormItem className="flex-1">
-                    <FormLabel style={{ color: "#1F3B61" }}>Year</FormLabel>
+                  <FormItem className="flex-1 bg-secondary/10 p-5 rounded-lg">
+                    <FormLabel className="text-md text-primary">Year</FormLabel>
                     <Select onValueChange={field.onChange} value={field.value}>
                       <FormControl>
-                        <SelectTrigger className="p-4 text-lg">
+                        <SelectTrigger className="p-4">
                           <SelectValue placeholder="Select year" />
                         </SelectTrigger>
                       </FormControl>
@@ -172,8 +165,8 @@ export default function RegistrationPage() {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel style={{ color: "#1F3B61" }}>Email</FormLabel>
+                <FormItem className="bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary">Email</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
@@ -192,8 +185,8 @@ export default function RegistrationPage() {
               control={form.control}
               name="contact"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel style={{ color: "#1F3B61" }}>
+                <FormItem className="bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary">
                     Contact Number
                   </FormLabel>
                   <FormControl>
@@ -213,8 +206,9 @@ export default function RegistrationPage() {
               control={form.control}
               name="domain"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel style={{ color: "#1F3B61" }}>Domain Choice</FormLabel>
+                <FormItem className="bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary">First Choice - Which domain you want to join ?</FormLabel>
+                  <p className="text-[14px] text-gray-500 mt-2 mb-3">(Please Note : The order of domains listed here does not represent any hierarchy or importance. Each domain is equally valuable to our community.)</p>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -227,13 +221,14 @@ export default function RegistrationPage() {
                           className="flex items-center space-x-3 p-3 border rounded-lg hover:bg-gray-50"
                         >
                           <RadioGroupItem
+                           className="cursor-pointer"
                             value={domain}
                             id={domain}
                             style={{ borderColor: "#1F3B61" }}
                           />
                           <label
                             htmlFor={domain}
-                            className="text-lg text-gray-800 cursor-pointer"
+                            className="text-sm text-primary cursor-pointer"
                           >
                             {domain}
                           </label>
@@ -250,8 +245,8 @@ export default function RegistrationPage() {
               control={form.control}
               name="reason"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel style={{ color: "#1F3B61" }}>
+                <FormItem className="bg-secondary/10 p-5 rounded-lg">
+                  <FormLabel className="text-md text-primary">
                     Why do you want to join?
                   </FormLabel>
                   <FormControl>
@@ -269,7 +264,7 @@ export default function RegistrationPage() {
             {/* Submit */}
             <Button
               type="submit"
-              className="w-full p-4 text-lg font-semibold"
+              className="w-full p-4 text-md font-semibold"
               style={{ backgroundColor: "#1F3B61" }}
             >
               Submit
