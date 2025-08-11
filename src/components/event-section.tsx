@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, ExternalLink, Clock } from "lucide-react";
-import RegistrationDialog from "@/components/registration-dialog";
 import useInView from "@/hooks/use-in-view";
 import Link from "next/link";
 
@@ -79,7 +78,7 @@ export default function EventsSection() {
     <section
       id="events"
       ref={ref}
-      className="container mx-auto px-4 py-16 md:py-24"
+      className="container mx-auto md:px-12 py-16 md:py-24"
     >
       <div
         className={`mx-auto mb-8 max-w-2xl text-center transition-all ${

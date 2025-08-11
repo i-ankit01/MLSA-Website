@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border drop-shadow-2xl bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 w-2/3 mx-auto rounded-lg">
+    <header className="sticky top-5 z-50 border drop-shadow-2xl bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 w-2/3 mx-auto rounded-lg">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="#" className="flex items-center gap-2">
           <span className="font-bold text-slate-800 text-lg">MLSA MIET</span>

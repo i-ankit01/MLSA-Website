@@ -26,7 +26,7 @@ export default function MembersSection() {
   const { ref, inView } = useInView({ threshold: 0.1 })
 
   return (
-    <section id="members" ref={ref} className="container mx-auto px-4 py-16 md:py-24">
+    <section id="members" ref={ref} className="container mx-auto md:px-12 py-16 md:py-24">
       <div className={`mx-auto mb-8 max-w-2xl text-center transition-all ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Core Team</h2>
         <p className="mt-2 text-slate-600">Meet the folks who drive the community forward.</p>

@@ -11,7 +11,7 @@ const BRAND_SECONDARY = "#0179D4"
 
 export default function Hero() {
   return (
-    <section id="volunteer" className="relative overflow-hidden">
+    <section id="volunteer" className="relative overflow-hidden md:px-12">
       {/* Decorative background */}
       {/* <div className="pointer-events-none absolute inset-0 -z-10">
         <div

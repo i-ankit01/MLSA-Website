@@ -16,7 +16,7 @@ export default function ContactSection() {
 const [state, action] = useActionState(sendContact, { ok: false, message: "" })
 
 return (
-  <section id="contact" className="relative overflow-hidden">
+  <section id="contact" className="relative overflow-hidden md:px-12">
     <div className="pointer-events-none absolute inset-0 -z-10 opacity-15" aria-hidden="true"
       style={{ background: `radial-gradient(900px 300px at 20% 0%, ${BRAND_PRIMARY}22, transparent 70%)` }} />
     <div className="container mx-auto grid gap-10 px-4 py-16 md:grid-cols-2 md:py-24">

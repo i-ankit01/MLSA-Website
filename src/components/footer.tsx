@@ -5,7 +5,7 @@ const BRAND_PRIMARY = "#1F3B61"
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-white">
+    <footer className="border-t bg-white md:px-12">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row">
         <div className="text-sm text-slate-600">
           © {new Date().getFullYear()} MLSA MIET. All rights reserved.

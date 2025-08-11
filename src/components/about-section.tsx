@@ -10,7 +10,7 @@ export default function AboutSection() {
   const { ref, inView } = useInView({ threshold: 0.1 })
 
   return (
-    <section id="about" ref={ref} className="relative overflow-hidden bg-slate-50">
+    <section id="about" ref={ref} className="relative overflow-hidden bg-slate-50 md:px-12">
       <div className="container mx-auto grid items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
         <div className={`transition-all ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
           <div className="inline-block rounded-full border px-3 py-1 text-xs font-medium text-slate-600">About the Society</div>
