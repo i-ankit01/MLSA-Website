@@ -11,11 +11,13 @@ export default function AboutSection() {
   const { ref, inView } = useInView({ threshold: 0.1 })
 
   return (
-    <section id="about" ref={ref} className="relative overflow-hidden bg-slate-50 md:px-12">
-      <div className="container mx-auto grid items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+    <section id="about" ref={ref} className="relative overflow-hidden bg-slate-50 md:px-12 px-4">
+      <div className="container mx-auto grid items-center gap-10 px-4 md:py-16 py-6 md:grid-cols-2 md:py-24">
         <div className={`transition-all ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
+          <div className="flex justify-center">
           <div className="inline-block rounded-full border px-3 py-1 text-xs font-medium text-slate-600">About the Society</div>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          </div>
+          <h2 className="mt-4 md:text-3xl text-2xl text-center md:tracking-normal mb-4 tracking-wide md:text-left font-bold tracking-tight text-slate-900 sm:text-4xl">
             Microsoft Learn Student Ambassadors at MIET
           </h2>
           <p className="mt-3 text-slate-600 md:text-lg">

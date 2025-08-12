@@ -64,7 +64,7 @@ export default function WhyJoinSection() {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="bg-slate-50 md:px-12 py-12">
+    <section ref={ref} className="bg-slate-50 md:px-12 md:py-12 px-3 py-10">
       <div className="container mx-auto px-4">
         <div className="grid items-start gap-8 lg:grid-cols-2">
           {/* Left Side - Compact Content */}
@@ -73,10 +73,10 @@ export default function WhyJoinSection() {
               inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="md:text-3xl text-2xl text-center mb-4 font-bold tracking-tight text-slate-900 sm:text-4xl">
               Why join us ?
             </h2>
-            <p className="text-slate-600 mb-6">
+            <p className="text-slate-600 mb-6 md:text-md text-sm text-center">
               Join a thriving community where innovation meets opportunity.
             </p>
 

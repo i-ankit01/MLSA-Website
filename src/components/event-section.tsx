@@ -78,7 +78,7 @@ export default function EventsSection() {
     <section
       id="events"
       ref={ref}
-      className="container mx-auto md:px-12 py-16 md:py-24"
+      className="container mx-auto md:px-12 px-7 md:py-16 py-7 md:py-24"
     >
       <div
         className={`mx-auto mb-8 max-w-2xl text-center transition-all ${
