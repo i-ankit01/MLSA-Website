@@ -49,6 +49,7 @@ const domainOptions = [
   "Web Development & Management",
   "Video Production & Editing",
   "Social Media & Management",
+  "Workflow Management",
 ];
 
 export default function RegistrationPage() {
@@ -468,7 +469,7 @@ export default function RegistrationPage() {
             {/* Submit */}
             <Button
               type="submit"
-              className="w-full p-4 text-md font-semibold bg-primary"
+              className="w-full p-4 text-md font-semibold bg-primary cursor-pointer"
               disabled={loading}
             >
               {loading && <Loader2Icon className="animate-spin mr-1"/>}
