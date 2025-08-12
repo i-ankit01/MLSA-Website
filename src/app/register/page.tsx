@@ -22,10 +22,12 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useRouter } from "next/navigation";
 import mlsamiet from "../../assets/mlsamietlogo1.webp";
 import Image from "next/image";
+import { useState } from "react";
+import { Loader2Icon } from "lucide-react";
 
 type FormValues = {
   name: string;
-  rollNo: string;
+  rollno: string;
   branch: string;
   year: string;
   email: string;
@@ -51,11 +53,12 @@ const domainOptions = [
 
 export default function RegistrationPage() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false)
 
   const form = useForm<FormValues>({
     defaultValues: {
       name: "",
-      rollNo: "",
+      rollno: "",
       branch: "",
       year: "",
       email: "",
@@ -69,9 +72,29 @@ export default function RegistrationPage() {
     },
   });
 
-  function onSubmit(values: FormValues) {
-    console.log(values);
-    router.push("/register/success");
+  async function onSubmit(values: FormValues) {
+    try {
+      setLoading(true)
+      const response = await fetch("/api/registration", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        setLoading(false)
+        router.push("/register/success");
+      } else {
+        setLoading(false)
+        const errorData = await response.json();
+        console.log(errorData)
+        alert("Registration failed");
+      }
+    } catch (error) {
+      setLoading(false)
+      console.error("Network error:", error);
+      alert("Network error. Please try again.");
+    }
   }
 
   return (
@@ -123,7 +146,7 @@ export default function RegistrationPage() {
             {/* Roll Number */}
             <FormField
               control={form.control}
-              name="rollNo"
+              name="rollno"
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
@@ -443,7 +466,9 @@ export default function RegistrationPage() {
             <Button
               type="submit"
               className="w-full p-4 text-md font-semibold bg-primary"
+              disabled={loading}
             >
+              {loading && <Loader2Icon className="animate-spin mr-1"/>}
               Submit
             </Button>
           </form>
