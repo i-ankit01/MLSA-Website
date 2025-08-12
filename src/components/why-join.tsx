@@ -108,7 +108,7 @@ export default function WhyJoinSection() {
                     <h3 className="mb-1 text-sm font-semibold text-slate-900">
                       {benefit.title}
                     </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 md:leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>

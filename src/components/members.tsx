@@ -88,7 +88,7 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
       {/* Content */}
       <div className="relative p-6 text-center flex ">
         {/* Profile Image with decorative ring */}
-        <div className="mb-4 md:ml-8">
+        <div className="mb-4 md:ml-8 ">
           
           <div
             className="relative h-24 w-24 mx-auto overflow-hidden rounded-full border-3 bg-white p-1"
@@ -104,7 +104,7 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
           </div>
         </div>
 
-        <div className="md:ml-15">
+        <div className="md:ml-15 ml-10">
         {/* Name and Role */}
         <h3 className="text-lg font-bold text-slate-900 mb-1">{member.name}</h3>
         <p className="text-sm font-medium mb-3" style={{ color: BRAND_SECONDARY }}>
@@ -141,12 +141,12 @@ export default function MembersSection() {
   const { ref, inView } = useInView({ threshold: 0.1 })
 
   return (
-    <section id="members" ref={ref} className="container mx-auto px-12 py-16 md:py-24">
+    <section id="members" ref={ref} className="container mx-auto md:px-12 px-6 md:py-16 py-10 md:py-24">
       <div
         className={`mx-auto mb-8 max-w-2xl text-center transition-all ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}
       >
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Core Team</h2>
-        <p className="mt-2 text-slate-600">Meet the folks who drive the community forward.</p>
+        <h2 className="md:text-3xl font-bold tracking-tight text-slate-900 text-2xl">Core Team</h2>
+        <p className="mt-2 md:text-md text-sm text-slate-600">Meet the folks who drive the community forward.</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

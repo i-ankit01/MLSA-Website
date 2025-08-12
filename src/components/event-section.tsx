@@ -1,15 +1,6 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, ExternalLink, Clock } from "lucide-react";
 import useInView from "@/hooks/use-in-view";
 import Link from "next/link";
@@ -36,7 +27,7 @@ const upcoming: Event[] = [
     location: "Online",
     description:
       "Register now to be a begin your journey and join the MLSA MIET team as a volunteer.",
-    link: "/route",
+    link: "/register",
   }
 ];
 

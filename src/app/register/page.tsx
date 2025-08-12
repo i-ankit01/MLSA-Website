@@ -46,9 +46,9 @@ const domainOptions = [
   "Graphic Design & Visual Content",
   "Phtography & Media Coverage",
   "Content Writing & Editorial",
-  "Web Dev & Management",
+  "Web Development & Management",
   "Video Production & Editing",
-  "Social Media Strategy & Management",
+  "Social Media & Management",
 ];
 
 export default function RegistrationPage() {
@@ -451,6 +451,9 @@ export default function RegistrationPage() {
                     </span>
                     Any additional information you'd like to share? (Optional)
                   </FormLabel>
+                  <p className="text-[14px] text-gray-500 mt-2 mb-3">
+                    (Note : Feel free to share your resume, portfolio, project links, designs, or any other work samples that can help us assess your skills for the domain(s).)
+                  </p>
                   <FormControl>
                     <Textarea
                       className="md:p-4 p-2 text-[15px]"

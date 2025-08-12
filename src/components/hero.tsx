@@ -21,7 +21,7 @@ export default function Hero() {
             <h1 className="md:mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
               Build. Learn. Lead. Together at MLSA MIET.
             </h1>
-            <p className="mt-4 max-w-prose text-slate-600 md:text-lg">
+            <p className="mt-4 text-sm max-w-prose text-slate-600 md:text-lg">
               Join a vibrant community of learners, builders, and leaders. We
               host hands-on workshops, hackathons, and speaker sessions to level
               up your skills while giving back.
