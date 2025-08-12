@@ -95,7 +95,7 @@ export default function EventsSection() {
 
       <Tabs defaultValue="upcoming" className="w-full">
         <div className="flex items-center justify-center">
-          <TabsList className="grid grid-cols-2">
+          <TabsList className="grid grid-cols-2 bg-secondary/30">
             <TabsTrigger className="cursor-pointer" value="upcoming">
               Upcoming
             </TabsTrigger>
@@ -133,7 +133,7 @@ function EventCard({
   isUpcoming?: boolean;
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-lg border border-gray-200 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <div className="group relative overflow-hidden rounded-lg border bg-white border-gray-200 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       {/* Hover background overlay */}
       <div
         className="absolute inset-0 opacity-0 transition group-hover:opacity-100"

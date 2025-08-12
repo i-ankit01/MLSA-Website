@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import useInView from "@/hooks/use-in-view"
+import microsoftgroupphoto from "../assets/microsoftgroupphoto.webp"
 
 const BRAND_PRIMARY = "#1F3B61"
 const BRAND_SECONDARY = "#0179D4"
@@ -33,7 +34,7 @@ export default function AboutSection() {
                style={{ background: `linear-gradient(135deg, ${BRAND_PRIMARY}, ${BRAND_SECONDARY})` }} aria-hidden="true" />
           <div className="relative overflow-hidden rounded-2xl border bg-white shadow-xl">
             <Image
-              src="/placeholder.svg?height=640&width=960"
+              src={microsoftgroupphoto}
               width={960}
               height={640}
               alt="Students engaging in an MLSA MIET tech talk"
