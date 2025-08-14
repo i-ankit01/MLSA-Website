@@ -127,7 +127,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                       1
                     </span>
                     Name
@@ -151,7 +151,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                       2
                     </span>
                     Roll Number
@@ -176,7 +176,7 @@ export default function RegistrationPage() {
                 render={({ field }) => (
                   <FormItem className="flex-1 border bg-secondary/5 shadow-md p-5 rounded-lg">
                     <FormLabel className="md:text-lg text-[17px] text-primary">
-                      <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                      <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                         3
                       </span>
                       Branch
@@ -199,7 +199,7 @@ export default function RegistrationPage() {
                 render={({ field }) => (
                   <FormItem className="flex-1 border bg-secondary/5 shadow-md p-5 rounded-lg">
                     <FormLabel className="md:text-lg text-[17px] text-primary">
-                      <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                      <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                         4
                       </span>
                       Year
@@ -229,7 +229,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                       5
                     </span>
                     Email
@@ -254,7 +254,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                       6
                     </span>
                     Contact Number
@@ -278,7 +278,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 md:w-5 md:h-5 w-7 mb-7 md:mb-0 aspect-square rounded-full text-sm flex items-center justify-center">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white md:w-5 md:h-5 w-7 mb-7 md:mb-0 aspect-square rounded-full text-sm flex items-center justify-center">
                       7
                     </span>
                     First Choice - Which Domain you want to join ?
@@ -325,7 +325,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 w-5 h-5 rounded-full text-sm flex items-center justify-center">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white w-5 h-5 rounded-full text-sm flex items-center justify-center">
                       8
                     </span>
                     Second Choice :
@@ -373,7 +373,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] md:text-lg text-primary">
-                    <span className="bg-secondary/40 md:w-7 w-17 md:mb-7 mb-18 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white md:w-7 w-17 md:mb-7 mb-18 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
                       9
                     </span>
                     What motivates you to volunteer with MLSA MIET, and what do
@@ -398,7 +398,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 md:w-7 w-17 md:mb-7 w-14 mb-19 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white md:w-7 w-17 md:mb-7 w-14 mb-19 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
                       10
                     </span>
                     In what ways do you see yourself contributing to the growth
@@ -423,7 +423,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 md:w-5 w-13 md:mb-0 mb-13 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white md:w-5 w-13 md:mb-0 mb-13 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
                       11
                     </span>
                     Any previous experience in a community or collaborative
@@ -447,7 +447,7 @@ export default function RegistrationPage() {
               render={({ field }) => (
                 <FormItem className="border bg-secondary/5 shadow-md p-5 rounded-lg">
                   <FormLabel className="md:text-lg text-[17px] text-primary">
-                    <span className="bg-secondary/40 md:w-5 w-11 md:mb-0 mb-6 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
+                    <span className="bg-gradient-to-b from-secondary/90 to-primary/90 text-white md:w-5 w-11 md:mb-0 mb-6 aspect-square rounded-full text-sm flex items-center justify-center leading-none">
                       12
                     </span>
                     Any additional information you'd like to share? (Optional)
@@ -469,7 +469,7 @@ export default function RegistrationPage() {
             {/* Submit */}
             <Button
               type="submit"
-              className="w-full p-4 text-md font-semibold bg-primary cursor-pointer"
+              className="w-full p-4 text-md font-semibold bg-gradient-to-b from-secondary/90 to-primary/90 cursor-pointer"
               disabled={loading}
             >
               {loading && <Loader2Icon className="animate-spin mr-1"/>}

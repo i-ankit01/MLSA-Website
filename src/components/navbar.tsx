@@ -47,7 +47,7 @@ export default function Navbar() {
             className="rounded-full px-5 font-semibold text-white shadow-lg hidden md:block transition hover:shadow-xl"
             style={{ backgroundColor: BRAND_SECONDARY }}
           >
-            <Link className="bg-gradient-to-b from-primary/50 to-secondary text-white" href="#volunteer">Go to MLSA MIET</Link>
+            <Link className="bg-gradient-to-b from-primary/50 to-secondary text-white" target="_blank" href="https://mlsamiet.vercel.app">Go to MLSA MIET</Link>
           </Button>
         </div>
 

@@ -21,6 +21,18 @@ export default function Hero() {
           <motion.div
             initial={{ x: -80, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }} className="md:hidden overflow-hidden ml-12 rounded-2xl w-2/3 border shadow-xl">
+              <Image
+                src={mlsamiet}
+                width={500}
+                height={500}
+                alt="MLSA MIET"
+                className=" object-cover"
+              />
+            </motion.div>
+          <motion.div
+            initial={{ x: -80, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col justify-center"
           >
@@ -43,7 +55,7 @@ export default function Hero() {
                   className="absolute -inset-1 rounded-full bg-gradient-to-b from-primary/50 to-secondary/30 text-white blur-md transition group-hover:bg-[#0179D4]/35"
                   aria-hidden="true"
                 />
-                <span className="relative">Become a Volunteer</span>
+                <span className="relative">Join MLSA MIET</span>
               </Link>
               <Button
                 variant="outline"
