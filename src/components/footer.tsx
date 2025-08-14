@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Instagram, Linkedin, MessageCircle, Twitter, Users } from 'lucide-react'
+import { Github, Instagram, Linkedin, Mail, MessageCircle, Twitter, Users } from 'lucide-react'
 
 const BRAND_PRIMARY = "#1F3B61"
 
@@ -15,9 +15,10 @@ export default function Footer() {
           <Social href="https://www.linkedin.com/company/mlsa-miet/" label="LinkedIn"><Linkedin className="h-4 w-4" /></Social>
           <Social href="https://www.instagram.com/mlsamiet/#" label="Instagram"><Instagram className="h-4 w-4" /></Social>
           <Social href="https://www.commudle.com/communities/microsoft-learn-student-ambassadors-meerut-institute-of-engineering-and-technology" label="Instagram"><Users className="h-4 w-4" /></Social>
+          <Social href="mailto:mlsa.community@miet.ac.in" label="Instagram"><Mail className="h-4 w-4" /></Social>
         </nav>
         </div>
-        <div className="text-sm text-slate-600">
+        <div className="text-sm text-slate-600 font-semibold">
           © {new Date().getFullYear()} MLSA MIET. All rights reserved
         </div>
       </div>

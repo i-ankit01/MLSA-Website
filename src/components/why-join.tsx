@@ -100,8 +100,7 @@ export default function WhyJoinSection() {
                   />
                   <div className="relative">
                     <div
-                      className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-md"
-                      style={{ backgroundColor: BRAND_PRIMARY }}
+                      className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-b from-secondary/90 to-primary/90"
                     >
                       {benefit.icon}
                     </div>

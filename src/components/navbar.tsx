@@ -1,24 +1,30 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
-const BRAND_PRIMARY = "#1F3B61"
-const BRAND_SECONDARY = "#0179D4"
+const BRAND_PRIMARY = "#1F3B61";
+const BRAND_SECONDARY = "#0179D4";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const navItems = [
     { href: "#events", label: "Events" },
     { href: "#about", label: "About" },
     { href: "#members", label: "Members" },
-  ]
+  ];
 
   return (
-    <header className="sticky top-5 z-50 border drop-shadow-2xl bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 md:w-2/3 w-80 mx-auto rounded-lg">
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="sticky top-5 z-50 border drop-shadow-2xl bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 md:w-2/3 w-80 mx-auto rounded-lg"
+    >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="#" className="flex items-center gap-2">
           <span className="font-bold text-slate-800 text-lg">MLSA MIET</span>
@@ -41,7 +47,7 @@ export default function Navbar() {
             className="rounded-full px-5 font-semibold text-white shadow-lg hidden md:block transition hover:shadow-xl"
             style={{ backgroundColor: BRAND_SECONDARY }}
           >
-            <Link href="#volunteer">Go to MLSA MIET</Link>
+            <Link className="bg-gradient-to-b from-primary/50 to-secondary text-white" href="#volunteer">Go to MLSA MIET</Link>
           </Button>
         </div>
 
@@ -70,6 +76,6 @@ export default function Navbar() {
           </nav>
         </div>
       )}
-    </header>
-  )
+    </motion.header>
+  );
 }

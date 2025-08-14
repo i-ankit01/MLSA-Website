@@ -86,7 +86,7 @@ export default function EventsSection() {
 
       <Tabs defaultValue="upcoming" className="w-full">
         <div className="flex items-center justify-center">
-          <TabsList className="grid grid-cols-2 bg-secondary/30">
+          <TabsList className="grid grid-cols-2 bg-gradient-to-b from-secondary/60 to-primary/30 text-white">
             <TabsTrigger className="cursor-pointer" value="upcoming">
               Upcoming
             </TabsTrigger>
@@ -159,17 +159,16 @@ function EventCard({
         {isUpcoming ? (
           <Link
             href={event.link || "#"}
-            className="rounded-full w-28 h-9 flex items-center justify-center gap-1 font-semibold text-white cursor-pointer"
-            style={{ backgroundColor: BRAND_SECONDARY }}
+            className="rounded-full w-28 h-9 flex items-center text-sm justify-center gap-1 shadow shadow-lg bg-gradient-to-b from-secondary/90 to-primary/90 font-semibold text-white cursor-pointer"
           >
-            Register <ExternalLink className="ml-1 h-4 w-4" />
+            Register <ExternalLink className=" h-4 w-4" />
           </Link>
         ) : (
           <Link
             href={event.link || "#"}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-green-500 bg-green-100 hover:bg-green-300 px-4 h-9 flex items-center justify-center gap-2 text-sm font-medium text-gray-800 hover:bg-gray-50"
+            className="rounded-full bg-gradient-to-b from-green-500 to-green-700 text-white shadow shadow-lg font-bold hover:bg-green-700 px-4 h-9 flex items-center justify-center gap-2 text-sm text-gray-800 hover:bg-gray-50"
           >
             Results <ExternalLink className="h-4 w-4" />
           </Link>

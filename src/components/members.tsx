@@ -111,13 +111,12 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
           {member.role}
         </p>
 
-        {/* LinkedIn Button */}
+
         <Link
           href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
-          style={{ backgroundColor: BRAND_PRIMARY }}
+          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-b from-secondary/90 to-primary/90 rounded-full text-xs font-medium text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
         >
           <Linkedin className="h-3.5 w-3.5" />
           Connect
