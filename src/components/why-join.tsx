@@ -3,7 +3,7 @@
 import type React from "react";
 
 import Image from "next/image";
-import {  Users, Award, Rocket, Medal, CheckCircle } from "lucide-react";
+import {  Users, Award, Rocket, Medal, CheckCircle, Globe } from "lucide-react";
 import useInView from "@/hooks/use-in-view";
 import mietgroupmlsa from "../assets/mietgroupmlsa.webp"
 import devgathering from "../assets/devgathering.webp"
@@ -50,6 +50,12 @@ const benefits: Benefit[] = [
     icon: <Medal className="h-4 w-4 text-white" />,
     title: "Certifications & Recognition",
     description: "Receive certificates to enhance your resume.",
+  },
+  {
+    id: "global",
+    icon: <Globe className="h-4 w-4 text-white" />,
+    title: "Community Access",
+    description: "Join the Microsoft Learn Student Ambassadors network.",
   },
 ];
 

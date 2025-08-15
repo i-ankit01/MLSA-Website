@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
+import jwt from "jsonwebtoken";
 
 export async function POST(req: NextRequest) {
   try {
@@ -37,10 +38,25 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    return NextResponse.json(
+    const response = NextResponse.json(
       { success: true, data: newStudent },
       { status: 201 }
     );
+
+    const token = jwt.sign({id : newStudent.id}, process.env.JWT_SECRET!, {
+      expiresIn: "7d",
+    });
+
+    response.cookies.set("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+    });
+
+    return response;
+
   } catch (error) {
     console.error("Error creating student:", error);
     return NextResponse.json(

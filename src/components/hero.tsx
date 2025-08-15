@@ -3,14 +3,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Users, CalendarDays, GraduationCap } from "lucide-react";
+import { Users, CalendarDays, GraduationCap } from "lucide-react";
 import mlsamiet from "../assets/mlsamietlogo1.webp";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 const BRAND_PRIMARY = "#1F3B61";
 const BRAND_SECONDARY = "#0179D4";
 
-export default function Hero() {
+type PROPS = {
+  isRegistered : boolean
+}
+export default function Hero({isRegistered} : PROPS) {
+  
+  const router = useRouter()
+  const handleClick = () => {
+    if (isRegistered) {
+      router.push('/register/success');
+    } else {
+      router.push('/register');
+    }
+  };
+
   return (
     <div className=" w-full relative bg-white">
       <section
@@ -46,17 +60,17 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 flex flex-col gap-5 sm:flex-row">
-              <Link
-                href={"/register"}
-                className="group relative inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold text-white shadow-lg cursor-pointer transition hover:shadow-xl"
+              <Button
+                onClick={handleClick}
+                className="group relative inline-flex items-center justify-center rounded-full px-6 py-6 text-base font-semibold text-white shadow-lg cursor-pointer transition hover:shadow-xl"
                 style={{ backgroundColor: BRAND_SECONDARY }}
               >
                 <span
                   className="absolute -inset-1 rounded-full bg-gradient-to-b from-primary/50 to-secondary/30 text-white blur-md transition group-hover:bg-[#0179D4]/35"
                   aria-hidden="true"
                 />
-                <span className="relative">Join MLSA MIET</span>
-              </Link>
+                <span className="relative">{isRegistered ? "Already Registered" : "Join MLSA MIET"}</span>
+              </Button>
               <Button
                 variant="outline"
                 asChild
@@ -99,6 +113,7 @@ export default function Hero() {
                 height={500}
                 alt="MLSA MIET"
                 className=" object-cover"
+                priority
               />
             </div>
           </motion.div>

@@ -15,7 +15,7 @@ type Event = {
   time: string;
   location: string;
   description: string;
-  link?: string;
+  link: string;
 };
 
 const upcoming: Event[] = [
@@ -62,7 +62,12 @@ const past: Event[] = [
   }
 ];
 
-export default function EventsSection() {
+type EventProps = {
+  isRegistered:boolean
+}
+
+export default function EventsSection({isRegistered}:EventProps) {
+
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
@@ -99,7 +104,7 @@ export default function EventsSection() {
         <TabsContent value="upcoming" className="mt-6">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {upcoming.map((e) => (
-              <EventCard key={e.id} event={e} isUpcoming />
+              <EventCard isRegistered key={e.id} event={e} isUpcoming />
             ))}
           </div>
         </TabsContent>
@@ -107,7 +112,7 @@ export default function EventsSection() {
         <TabsContent value="past" className="mt-6">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {past.map((e) => (
-              <EventCard key={e.id} event={e} />
+              <EventCard isRegistered key={e.id} event={e} />
             ))}
           </div>
         </TabsContent>
@@ -119,9 +124,11 @@ export default function EventsSection() {
 function EventCard({
   event,
   isUpcoming = false,
+  isRegistered,
 }: {
   event: Event;
   isUpcoming?: boolean;
+  isRegistered : boolean
 }) {
   return (
     <div className="group relative overflow-hidden rounded-lg border bg-white border-gray-200 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
@@ -158,10 +165,10 @@ function EventCard({
       <div className="flex items-center gap-3 p-4 relative z-10">
         {isUpcoming ? (
           <Link
-            href={event.link || "#"}
+            href={isRegistered? "/register/success" : event.link}
             className="rounded-full w-28 h-9 flex items-center text-sm justify-center gap-1 shadow shadow-lg bg-gradient-to-b from-secondary/90 to-primary/90 font-semibold text-white cursor-pointer"
           >
-            Register <ExternalLink className=" h-4 w-4" />
+            <span>{isRegistered ? "Registered" : "Register"}</span><ExternalLink className=" h-4 w-4" />
           </Link>
         ) : (
           <Link
