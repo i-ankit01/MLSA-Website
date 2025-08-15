@@ -104,7 +104,7 @@ export default function EventsSection({isRegistered}:EventProps) {
         <TabsContent value="upcoming" className="mt-6">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {upcoming.map((e) => (
-              <EventCard isRegistered key={e.id} event={e} isUpcoming />
+              <EventCard isRegistered={isRegistered} key={e.id} event={e} isUpcoming />
             ))}
           </div>
         </TabsContent>
@@ -112,7 +112,7 @@ export default function EventsSection({isRegistered}:EventProps) {
         <TabsContent value="past" className="mt-6">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {past.map((e) => (
-              <EventCard isRegistered key={e.id} event={e} />
+              <EventCard isRegistered={isRegistered} key={e.id} event={e} />
             ))}
           </div>
         </TabsContent>
